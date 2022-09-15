@@ -3,6 +3,7 @@ body{
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+
 a:link { text-decoration: none; color: inherit;}
 
 
@@ -18,7 +19,8 @@ a:active { text-decoration: none; color: inherit;}
 .container{
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 20vh 80vh;
+    grid-template-rows: 140px 1fr;
+    height: 100vh;
 }
 
 .sidebar{
@@ -60,7 +62,6 @@ li>a:last-child{
     grid-template-columns: minmax(200px, 6fr) 4fr;
     grid-template-rows: 1fr 1fr;
     padding: 10px;
-    overflow: hidden;
 }
 
 .search-bar{
@@ -163,23 +164,52 @@ li>a:last-child{
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 40px 1fr;
+    gap: 20px;
 }
 
 .your-projects, .announcements{
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 .projects-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(auto-fill, minmax(200px 1fr));
     gap: 20px;
 }
-.projects-container>div{
-    background-color:white;
+
+.card-foreground{
+    background-color: #0369a1;
     border-radius: 10px;
-    padding: 15px;
+}
+.card-background{
+    background-color: white;
+    border-radius: 0 10px 10px 0;
+    margin-left: 10px;
+    height: 100%;
+}
+.projects-container>div>div>div{
+    padding: 25px;
+}
+.card-background span{
+    font-weight: bold;
+    font-size: 1rem;
+    color: black;
+}
+.card-background div{
+    color: gray;
+    font-size: .9rem;
 }
 
+.accouncement-box{
+    background-color: white;
+    height: 45%;
+    border-radius: 10px;
+}
 
+.trending-box{
+    background-color: white;
+    height: 45%;
+    border-radius: 10px;
+}
