@@ -18,7 +18,7 @@ a:active { text-decoration: none; color: inherit;}
 .container{
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 20vh 80vh;
 }
 
 .sidebar{
@@ -60,6 +60,7 @@ li>a:last-child{
     grid-template-columns: minmax(200px, 6fr) 4fr;
     grid-template-rows: 1fr 1fr;
     padding: 10px;
+    overflow: hidden;
 }
 
 .search-bar{
@@ -70,14 +71,16 @@ li>a:last-child{
 }
 
 #search{
-    height: 20px;
+    height: 30%;
 }
-
+.search-bar-form{
+    width: 100%;
+}
 #search-bar-input{
     border-radius: 15px;
     border-style: none;
     background-color: #e0f2fe;
-    width: 550px;
+    width: 80%;
     height: 25px;
     padding-left: 20px;
 }
@@ -97,8 +100,7 @@ li>a:last-child{
 }
 
 #alarm{
-    width: 40px;
-    height: 40px;
+    height: 50%;
 }
 
 .account-box>p{
@@ -160,17 +162,24 @@ li>a:last-child{
     background-color: #e0f2fe;
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 30px repeat(3, 1fr);
+    grid-template-rows: 40px 1fr;
+}
+
+.your-projects, .announcements{
+    font-weight: bold;
+    font-size: 1.1rem;
 }
 
 .projects-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-rows: repeat(3, 1fr);
     gap: 20px;
 }
 .projects-container>div{
-    background-color:#f0f9ff;
+    background-color:white;
+    border-radius: 10px;
+    padding: 15px;
 }
 
 
